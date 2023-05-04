@@ -1,0 +1,41 @@
+<main>
+
+  <h3> Mass Conversor </h3>
+
+  <section>
+
+    <div>
+
+      <span>Kilograms</span>
+      <input type="number" [(ngModel)]="kg">
+
+      <span>Grams</span>
+      <input type="number">
+
+      <span>Pounds</span>
+      <input type="number">
+
+      <span>Tons</span>
+      <input type="number">
+
+    </div>
+
+    <div>
+
+      <span>Kilograms</span>
+      <span>{{kg}}</span>
+
+      <span>Grams</span>
+      <span> {{kgGram()}} </span>
+
+      <span>Pounds</span>
+      <span> {{kgPound()}} </span>
+
+      <span>Tons</span>
+      <span></span>
+
+    </div>
+
+  </section>
+
+</main>
