@@ -1,1 +1,53 @@
-<p>volume works!</p>
+<main>
+
+  <h3> Volume Conversor </h3>
+
+  <section>
+
+    <div>
+
+      <span>Liters</span>
+      <input type="number" [(ngModel)]="l" (click)="resetOthers(m,g,cm,bigC,smallC)">
+
+      <span>Mililiters</span>
+      <input type="number" [(ngModel)]="m" (click)="resetOthers(l,g,cm,bigC,smallC)">
+
+      <span>Gallons</span>
+      <input type="number" [(ngModel)]="g" (click)="resetOthers(l,m,cm,bigC,smallC)">
+
+      <span>Cubic Meter</span>
+      <input type="number" [(ngModel)]="cm" (click)="resetOthers(l,m,g,bigC,smallC)">
+
+      <span>Cucharadas</span>
+      <input type="number" [(ngModel)]="bigC" (click)="resetOthers(l,m,g,cm,smallC)">
+
+      <span>Cucharaditas</span>
+      <input type="number" [(ngModel)]="smallC" (click)="resetOthers(l,m,g,cm,bigC)">
+
+    </div>
+
+    <div>
+
+      <span>Liters</span>
+      <span>{{l}} {{mL()}} {{gL()}} {{cmL()}} {{bigcL()}} {{smallcL()}} </span>
+
+      <span>Mililiters</span>
+      <span>{{m}} {{lM()}} {{gM()}} {{cmM()}} {{bigcM()}} {{smallcM()}} </span>
+
+      <span>Gallons</span>
+      <span>{{g}} {{lG()}} {{mG()}} {{cmG()}} {{bigcG()}} {{smallcG()}} </span>
+
+      <span>Cubic Meter</span>
+      <span>{{cm}} {{lCm()}} {{mCm()}} {{gCm()}} {{bigcCm()}} {{smallcCm()}} </span>
+
+      <span>Cucharadas</span>
+      <span>{{bigC}} {{lBigC()}} {{mBigC()}} {{gBigC()}} {{cmBigC()}} {{smallcBigC()}} </span>
+
+      <span>Cucharaditas</span>
+      <span>{{smallC}} {{lSmallC()}} {{mSmallC()}} {{gSmallC()}} {{cmSmallC()}} {{bigcSmallC()}} </span>
+
+    </div>
+
+  </section>
+
+</main>

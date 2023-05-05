@@ -1,1 +1,41 @@
-<p>time works!</p>
+<main>
+
+  <h3> Time Conversor </h3>
+
+  <section>
+
+    <div>
+
+      <span>Days</span>
+      <input type="number" [(ngModel)]="d" (click)="resetOthers(h,m,s)">
+
+      <span>Hours</span>
+      <input type="number" [(ngModel)]="h" (click)="resetOthers(d,m,s)">
+
+      <span>Minutes</span>
+      <input type="number" [(ngModel)]="m" (click)="resetOthers(d,h,s)">
+
+      <span>Seconds</span>
+      <input type="number" [(ngModel)]="s" (click)="resetOthers(d,h,m)">
+
+    </div>
+
+    <div>
+
+      <span>Days</span>
+      <span>{{d}} {{hD()}} {{mD()}} {{sD()}} </span>
+
+      <span>Hours</span>
+      <span>{{h}} {{dH()}} {{mH()}} {{sH()}} </span>
+
+      <span>Minutes</span>
+      <span>{{m}} {{dM()}} {{hM()}} {{sM()}} </span>
+
+      <span>Seconds</span>
+      <span>{{s}} {{dS()}} {{hS()}} {{mS()}} </span>
+
+    </div>
+
+  </section>
+
+</main>

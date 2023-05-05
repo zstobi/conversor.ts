@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  color: #fff;
+}
+
+body {
+  // color
+  background-color: #1c1c1c;
+}
+
+button {
+  // color
+  background-color: inherit;
+
+  // design
+  border: none;
+  cursor: pointer;
+
+  // structure
+}
+
+section {
+
+  // structure
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}

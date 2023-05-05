@@ -7,7 +7,8 @@ import { TimeComponent } from './components/time/time.component';
 import { SpeedComponent } from './components/speed/speed.component';
 import { VolumeComponent } from './components/volume/volume.component';
 import { DsizeComponent } from './components/dsize/dsize.component';
-import { GasComponent } from './components/gas/gas.component';
+// import { GasComponent } from './components/gas/gas.component';
+import { LengthComponent } from './components/length/length.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'speed', component: SpeedComponent},
   {path: 'vol', component: VolumeComponent},
   {path: 'dsize', component: DsizeComponent},
-  {path: 'gas', component: GasComponent},
+  {path: 'length', component: LengthComponent},
+  // {path: 'gas', component: GasComponent},
 ];
 
 @NgModule({

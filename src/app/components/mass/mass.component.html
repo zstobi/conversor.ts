@@ -7,32 +7,32 @@
     <div>
 
       <span>Kilograms</span>
-      <input type="number" [(ngModel)]="kg">
+      <input type="number" [(ngModel)]="kg" (click)="resetOthers(g,pounds,tons)">
 
       <span>Grams</span>
-      <input type="number">
+      <input type="number" [(ngModel)]="g" (click)="resetOthers(kg,pounds,tons)">
 
       <span>Pounds</span>
-      <input type="number">
+      <input type="number" [(ngModel)]="pounds" (click)="resetOthers(kg,g,tons)">
 
       <span>Tons</span>
-      <input type="number">
+      <input type="number" [(ngModel)]="tons" (click)="resetOthers(kg,g,pounds)">
 
     </div>
 
     <div>
 
       <span>Kilograms</span>
-      <span>{{kg}}</span>
+      <span>{{kg}} {{gKg()}} {{poundKg()}} {{tonKg()}} </span>
 
       <span>Grams</span>
-      <span> {{kgGram()}} </span>
+      <span>{{g}} {{kgGram()}} {{poundG()}} {{tonG()}} </span>
 
       <span>Pounds</span>
-      <span> {{kgPound()}} </span>
+      <span>{{pounds}} {{kgPound()}} {{gPound()}} {{tonPound()}} </span>
 
       <span>Tons</span>
-      <span></span>
+      <span>{{tons}} {{kgTon()}} {{gTon()}} {{poundTon()}} </span>
 
     </div>
 

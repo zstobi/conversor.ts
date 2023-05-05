@@ -1,1 +1,35 @@
-<p>temp works!</p>
+<main>
+
+  <h3> Temperature Conversor </h3>
+
+  <section>
+
+    <div>
+
+      <span>Celcius</span>
+      <input type="number" [(ngModel)]="c" (click)="resetOthers(f,k)">
+
+      <span>Fahrenheit</span>
+      <input type="number" [(ngModel)]="f" (click)="resetOthers(c,k)">
+
+      <span>Kelvin</span>
+      <input type="number" [(ngModel)]="k" (click)="resetOthers(c,f)">
+
+    </div>
+
+    <div>
+
+      <span>Celcius</span>
+      <span>{{c}} {{fC()}} {{kC()}} </span>
+
+      <span>Fahrenheit</span>
+      <span>{{f}} {{cF()}} {{kF()}} </span>
+
+      <span>Kelvin</span>
+      <span>{{k}} {{cK()}} {{fK()}} </span>
+
+    </div>
+
+  </section>
+
+</main>

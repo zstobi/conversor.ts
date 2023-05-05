@@ -1,1 +1,35 @@
-<p>speed works!</p>
+<main>
+
+  <h3> Speed Conversor </h3>
+
+  <section>
+
+    <div>
+
+      <span>{{kphWithS()}}</span>
+      <input type="number" [(ngModel)]="kph" (click)="resetOthers(m,k)">
+
+      <span>{{mphWithS()}}</span>
+      <input type="number" [(ngModel)]="m" (click)="resetOthers(kph,k)">
+
+      <span>Knots</span>
+      <input type="number" [(ngModel)]="k" (click)="resetOthers(kph,m)">
+
+    </div>
+
+    <div>
+
+      <span>{{kphWithS()}}</span>
+      <span>{{kph}} {{mKph()}} {{kKph()}} </span>
+
+      <span>{{mphWithS()}}</span>
+      <span>{{m}} {{kphM()}} {{kM()}} </span>
+
+      <span>Knots</span>
+      <span>{{k}} {{kphK()}} {{mK()}} </span>
+
+    </div>
+
+  </section>
+
+</main>
