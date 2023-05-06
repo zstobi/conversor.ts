@@ -1,12 +1,31 @@
-<section>
-  <h1>Conversor</h1>
+<main class="main">
+  <section>
+    <h1>Conversor</h1>
 
-  <button routerLink="mass">Mass</button>
-  <button routerLink="temp">Temperature</button>
-  <button routerLink="time">Time</button>
-  <button routerLink="speed">Speed</button>
-  <button routerLink="vol">Volume</button>
-  <button routerLink="dsize">Data Size</button>
-  <button routerLink="length">Length</button>
-  <!-- <button routerLink="gas">Gas calculator</button> -->
-</section>
+    <button routerLink="mass">
+      {{pickSvce.picker('Mass','Masa')}}
+    </button>
+    <button routerLink="temp">
+      {{pickSvce.picker('Temperature','Temperatura')}}
+    </button>
+    <button routerLink="time">
+      {{pickSvce.picker('Time','Tiempo')}}
+    </button>
+    <button routerLink="speed">
+      {{pickSvce.picker('Speed','Velocidad')}}
+    </button>
+    <button routerLink="vol">
+      {{pickSvce.picker('Volume','Volumen')}}
+    </button>
+    <button routerLink="dsize">
+      {{pickSvce.picker('Data Size','Tamaño de Datos')}}
+    </button>
+    <button routerLink="length">
+      {{pickSvce.picker('Length','Longitud')}}
+    </button>
+
+    <!-- <button routerLink="gas">Gas calculator</button> -->
+
+  </section>
+  <app-footer></app-footer>
+</main>

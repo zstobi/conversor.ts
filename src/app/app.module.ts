@@ -14,6 +14,7 @@ import { DsizeComponent } from './components/dsize/dsize.component';
 import { LengthComponent } from './components/length/length.component';
 import { GasComponent } from './components/gas/gas.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     VolumeComponent,
     DsizeComponent,
     LengthComponent,
-    GasComponent
+    GasComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

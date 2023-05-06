@@ -1,0 +1,36 @@
+.footer {
+  width: 200px;
+}
+
+.footerBtns {
+  width: 100%;
+
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+span {
+  em {
+    color: #00000081;
+
+    font-size: small;
+  }
+}
+
+.idiom {
+  // design
+  height: 30px;
+  width: 100%;
+  border: none;
+
+  // font
+  font-size: small;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  margin: 0;
+}
