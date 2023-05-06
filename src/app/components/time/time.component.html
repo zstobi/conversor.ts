@@ -1,38 +1,59 @@
 <main>
 
-  <h3> Time Conversor </h3>
+  <div>
+    <button routerLink="" class="backBtn"> Back </button>
+    <h3> Time Conversor </h3>
+  </div>
 
   <section>
 
     <div>
 
-      <span>Days</span>
-      <input type="number" [(ngModel)]="d" (click)="resetOthers(h,m,s)">
+      <div class="sideA">
+        <span class="inp-span">Days</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="d" (click)="resetOthers(h,m,s)">
+      </div>
 
-      <span>Hours</span>
-      <input type="number" [(ngModel)]="h" (click)="resetOthers(d,m,s)">
+      <div class="sideA">
+        <span class="inp-span">Hours</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="h" (click)="resetOthers(d,m,s)">
+      </div>
 
-      <span>Minutes</span>
-      <input type="number" [(ngModel)]="m" (click)="resetOthers(d,h,s)">
+      <div class="sideA">
+        <span class="inp-span">Minutes</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="m" (click)="resetOthers(d,h,s)">
+      </div>
 
-      <span>Seconds</span>
-      <input type="number" [(ngModel)]="s" (click)="resetOthers(d,h,m)">
+      <div class="sideA">
+        <span class="inp-span">Seconds</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="s" (click)="resetOthers(d,h,m)">
+      </div>
 
     </div>
 
+=
+
     <div>
 
-      <span>Days</span>
-      <span>{{d}} {{hD()}} {{mD()}} {{sD()}} </span>
+      <div class="sideB">
+        <span class="res-span">Days</span>
+        <span class="databinding res-span">{{d}} {{hD()}} {{mD()}} {{sD()}} </span>
+      </div>
 
-      <span>Hours</span>
-      <span>{{h}} {{dH()}} {{mH()}} {{sH()}} </span>
+      <div class="sideB">
+        <span class="res-span">Hours</span>
+        <span class="databinding res-span">{{h}} {{dH()}} {{mH()}} {{sH()}} </span>
+      </div>
 
-      <span>Minutes</span>
-      <span>{{m}} {{dM()}} {{hM()}} {{sM()}} </span>
+      <div class="sideB">
+        <span class="res-span">Minutes</span>
+        <span class="databinding res-span">{{m}} {{dM()}} {{hM()}} {{sM()}} </span>
+      </div>
 
-      <span>Seconds</span>
-      <span>{{s}} {{dS()}} {{hS()}} {{mS()}} </span>
+      <div class="sideB">
+        <span class="res-span">Seconds</span>
+        <span class="databinding res-span">{{s}} {{dS()}} {{hS()}} {{mS()}} </span>
+      </div>
 
     </div>
 

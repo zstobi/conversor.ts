@@ -1,32 +1,49 @@
 <main>
 
-  <h3> Temperature Conversor </h3>
+  <div>
+    <button routerLink="" class="backBtn"> Back </button>
+    <h3> Temperature Conversor </h3>
+  </div>
 
   <section>
 
     <div>
 
-      <span>Celcius</span>
-      <input type="number" [(ngModel)]="c" (click)="resetOthers(f,k)">
+      <div class="sideA">
+        <span class="inp-span">Celcius</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="c" (click)="resetOthers(f,k)">
+      </div>
 
-      <span>Fahrenheit</span>
-      <input type="number" [(ngModel)]="f" (click)="resetOthers(c,k)">
+      <div class="sideA">
+        <span class="inp-span">Fahrenheit</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="f" (click)="resetOthers(c,k)">
+      </div>
 
-      <span>Kelvin</span>
-      <input type="number" [(ngModel)]="k" (click)="resetOthers(c,f)">
+      <div class="sideA">
+        <span class="inp-span">Kelvin</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="k" (click)="resetOthers(c,f)">
+      </div>
 
     </div>
 
+=
+
     <div>
 
-      <span>Celcius</span>
-      <span>{{c}} {{fC()}} {{kC()}} </span>
+      <div class="sideB">
+        <span class="res-span">Celcius</span>
+        <span class="databinding res-span">{{c}} {{fC()}} {{kC()}} </span>
+      </div>
 
-      <span>Fahrenheit</span>
-      <span>{{f}} {{cF()}} {{kF()}} </span>
+      <div class="sideB">
+        <span class="res-span">Fahrenheit</span>
+        <span class="databinding res-span">{{f}} {{cF()}} {{kF()}} </span>
+      </div>
 
-      <span>Kelvin</span>
-      <span>{{k}} {{cK()}} {{fK()}} </span>
+      <div class="sideB">
+        <span class="res-span">Kelvin</span>
+        <span class="databinding res-span">{{k}} {{cK()}} {{fK()}} </span>
+      </div>
 
     </div>
 

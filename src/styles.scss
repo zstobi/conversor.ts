@@ -1,29 +1,213 @@
-* {
-  color: #fff;
-}
+@import "@fontsource/akshar";
+@import "@fontsource/barlow";
+@import "@fontsource/cabin";
 
-body {
-  // color
-  background-color: #1c1c1c;
-}
+$font: 'barlow';
 
-button {
-  // color
-  background-color: inherit;
-
-  // design
-  border: none;
-  cursor: pointer;
-
-  // structure
-}
-
-section {
-
-  // structure
+@mixin placing {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+}
+
+body {
+  // color
+  // background-color: #1c1c1c;
+  background-color: #fff;
+
+  // design
+  // margin-top: 100px;
+  margin-top: 40px;
+}
+
+h1 {
+  // color
+  color: hsl(217, 71%, 53%);
+
+  // design
+  margin: 0;
+
+  // font
+  font-size: 2.3em;
+  font-family: 'Bungee';
+  letter-spacing: 1px;
+  text-shadow:
+    1px 1px 1px #000,
+    1px 2px 1px #000,
+    1px 3px 1px #000,
+    1px 4px 1px #000,
+    1px 5px 1px #000,
+    1px 6px 1px #000,
+    1px 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+section {
+  // structure
+  @include placing();
+  gap: 30px;
+}
+
+button {
+  // color
+  background-color: #fff;
+  color: #000;
+
+  // design
+  cursor: pointer;
+  outline: none;
+
+  height: 40px;
+  width: 200px;
+
+  border: 1px solid #000;
+  border-radius: 4px;
+
+  // font
+  font-family: $font;
+  font-size: 1.1rem;
+
+  // animation
+  transition: all .25ms;
+}
+button:hover{
+  border: 1px solid hsl(217, 71%, 53%);
+  color: hsl(217, 71%, 53%);
+}
+button:active{
+  border: 2px solid hsl(348, 100%, 61%);
+  color: hsl(348, 100%, 61%);
+}
+
+main, section {
+  // strucure
+  @include placing();
+  gap: 20px;
+}
+div {
+  // strucure
+  @include placing();
+  gap: 5px;
+}
+h3, span {
+  font-family: $font;
+}
+
+.sideA {
+
+  // design
+  height: 50px;
+  width: 200px;
+
+  // border-radius: 4px;
+  // border: .5px solid #000;
+  // box-shadow: 1px 1px 10px #919191;
+
+  // structure
+  @include placing();
+}
+
+.sideB {
+
+  // design
+  height: 50px;
+  width: 200px;
+
+  border-radius: 4px;
+  border: 2px solid hsl(217, 71%, 53%);
+
+  // structure
+  @include placing();
+}
+
+.res-span {
+  // color
+  background-color: hsl(217, 71%, 53%);
+  color: #000;
+
+  // design
+  height: 100%;
+  width: 100%;
+
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+
+  text-align: center;
+}
+
+.inp-span {
+  // color
+  // background-color: #000;
+  // color: hsl(348, 100%, 61%);
+  color: #000;
+
+  // design
+  height: 100%;
+  width: 100%;
+
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+
+  text-align: center;
+}
+
+.databinding {
+  // color
+  background-color: inherit;
+  // color: hsl(217, 71%, 53%);
+  color: hsl(348, 100%, 61%);
+}
+
+.inp {
+  // color
+  background-color: inherit;
+
+  // design
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  // border-bottom: 1px solid #000;
+
+  text-align: center;
+}
+.inp:active, .inp:focus{
+  border: 1px solid hsl(348, 100%, 61%);
+}
+
+.row {
+  width: 200px;
+
+  // structure
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.backBtn {
+  // color
+  background-color: #000;
+  color: #fff;
+
+  // design
+  height: 35px;
+  width: 70px;
+
+  border: none;
+
+  // animation
+  transition: all .5ms;
+}
+.backBtn:hover {
+  // color
+  color: hsl(217, 71%, 53%);
+
+  // design
+  border: none;
+}
+.backBtn:active {
+  // color
+  color: hsl(217, 71%, 53%);
+
+  // design
+  border: 2px solid hsl(217, 71%, 53%);
 }

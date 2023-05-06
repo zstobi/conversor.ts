@@ -1,56 +1,89 @@
 <main>
 
-  <h3> Data Size Conversor </h3>
+  <div>
+    <button routerLink="" class="backBtn"> Back </button>
+    <h3> Data Size Conversor </h3>
+  </div>
 
   <section>
 
     <div>
 
-      <span>Bit</span>
-      <input type="number" [(ngModel)]="bit" (click)="resetOthers(byte,kilo,mega,giga,tera,peta)">
+      <div class="sideA">
+        <span class="inp-span">Bit</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="bit" (click)="resetOthers(byte,kilo,mega,giga,tera,peta)">
+      </div>
 
-      <span>Byte</span>
-      <input type="number" [(ngModel)]="byte" (click)="resetOthers(bit,kilo,mega,giga,tera,peta)">
+      <div class="sideA">
+        <span class="inp-span">Byte</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="byte" (click)="resetOthers(bit,kilo,mega,giga,tera,peta)">
+      </div>
 
-      <span>Kilobyte</span>
-      <input type="number" [(ngModel)]="kilo" (click)="resetOthers(bit,byte,mega,giga,tera,peta)">
+      <div class="sideA">
+        <span class="inp-span">Kilobyte</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="kilo" (click)="resetOthers(bit,byte,mega,giga,tera,peta)">
+      </div>
 
-      <span>Megabyte</span>
-      <input type="number" [(ngModel)]="mega" (click)="resetOthers(bit,byte,kilo,giga,tera,peta)">
+      <div class="sideA">
+        <span class="inp-span">Megabyte</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="mega" (click)="resetOthers(bit,byte,kilo,giga,tera,peta)">
+      </div>
 
-      <span>Gigabyte</span>
-      <input type="number" [(ngModel)]="giga" (click)="resetOthers(bit,byte,kilo,mega,tera,peta)">
+      <div class="sideA">
+        <span class="inp-span">Gigabyte</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="giga" (click)="resetOthers(bit,byte,kilo,mega,tera,peta)">
+      </div>
 
-      <span>Terabyte</span>
-      <input type="number" [(ngModel)]="tera" (click)="resetOthers(bit,byte,kilo,mega,giga,peta)">
+      <div class="sideA">
+        <span class="inp-span">Terabyte</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="tera" (click)="resetOthers(bit,byte,kilo,mega,giga,peta)">
+      </div>
 
-      <span>Petabyte</span>
-      <input type="number" [(ngModel)]="peta" (click)="resetOthers(bit,byte,kilo,mega,giga,tera)">
+      <div class="sideA">
+        <span class="inp-span">Petabyte</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="peta" (click)="resetOthers(bit,byte,kilo,mega,giga,tera)">
+      </div>
 
     </div>
 
+=
+
     <div>
 
-      <span>Bit</span>
-      <span>{{bit}} {{byteBit()}} {{kiloBit()}} {{megaBit()}} {{gigaBit()}} {{teraBit()}} {{petaBit()}} </span>
+      <div class="sideB">
+        <span class="res-span">Bit</span>
+        <span class="databinding res-span">{{bit}} {{byteBit()}} {{kiloBit()}} {{megaBit()}} {{gigaBit()}} {{teraBit()}} {{petaBit()}} </span>
+      </div>
 
-      <span>Byte</span>
-      <span>{{byte}} {{bitByte()}} {{kiloByte()}} {{megaByte()}} {{gigaByte()}} {{teraByte()}} {{petaByte()}} </span>
+      <div class="sideB">
+        <span class="res-span">Byte</span>
+        <span class="databinding res-span">{{byte}} {{bitByte()}} {{kiloByte()}} {{megaByte()}} {{gigaByte()}} {{teraByte()}} {{petaByte()}} </span>
+      </div>
 
-      <span>Kilobyte</span>
-      <span>{{kilo}} {{bitKilo()}} {{byteKilo()}} {{megaKilo()}} {{gigaKilo()}} {{teraKilo()}} {{petaKilo()}} </span>
+      <div class="sideB">
+        <span class="res-span">Kilobyte</span>
+        <span class="databinding res-span">{{kilo}} {{bitKilo()}} {{byteKilo()}} {{megaKilo()}} {{gigaKilo()}} {{teraKilo()}} {{petaKilo()}} </span>
+      </div>
 
-      <span>Megabyte</span>
-      <span>{{mega}} {{bitMega()}} {{byteMega()}} {{kiloMega()}} {{gigaMega()}} {{teraMega()}} {{petaMega()}} </span>
+      <div class="sideB">
+        <span class="res-span">Megabyte</span>
+        <span class="databinding res-span">{{mega}} {{bitMega()}} {{byteMega()}} {{kiloMega()}} {{gigaMega()}} {{teraMega()}} {{petaMega()}} </span>
+      </div>
 
-      <span>Gigabyte</span>
-      <span>{{giga}} {{bitGiga()}} {{byteGiga()}} {{kiloGiga()}} {{megaGiga()}} {{teraGiga()}} {{petaGiga()}} </span>
+      <div class="sideB">
+        <span class="res-span">Gigabyte</span>
+        <span class="databinding res-span">{{giga}} {{bitGiga()}} {{byteGiga()}} {{kiloGiga()}} {{megaGiga()}} {{teraGiga()}} {{petaGiga()}} </span>
+      </div>
 
-      <span>Terabyte</span>
-      <span>{{tera}} {{bitTera()}} {{byteTera()}} {{kiloTera()}} {{megaTera()}} {{gigaTera()}} {{petaTera()}} </span>
+      <div class="sideB">
+        <span class="res-span">Terabyte</span>
+        <span class="databinding res-span">{{tera}} {{bitTera()}} {{byteTera()}} {{kiloTera()}} {{megaTera()}} {{gigaTera()}} {{petaTera()}} </span>
+      </div>
 
-      <span>Petabyte</span>
-      <span>{{peta}} {{bitPeta()}} {{bytePeta()}} {{kiloPeta()}} {{megaPeta()}} {{gigaPeta()}} {{teraPeta()}} </span>
+      <div class="sideB">
+        <span class="res-span">Petabyte</span>
+        <span class="databinding res-span">{{peta}} {{bitPeta()}} {{bytePeta()}} {{kiloPeta()}} {{megaPeta()}} {{gigaPeta()}} {{teraPeta()}} </span>
+      </div>
 
     </div>
 

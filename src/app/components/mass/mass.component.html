@@ -1,38 +1,59 @@
 <main>
 
-  <h3> Mass Conversor </h3>
+  <div>
+    <button routerLink="" class="backBtn"> Back </button>
+    <h3> Mass Conversor </h3>
+  </div>
 
   <section>
 
     <div>
 
-      <span>Kilograms</span>
-      <input type="number" [(ngModel)]="kg" (click)="resetOthers(g,pounds,tons)">
+      <div class="sideA">
+        <span class="inp-span">Kilograms:</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="kg" (click)="resetOthers(g,pounds,tons)">
+      </div>
 
-      <span>Grams</span>
-      <input type="number" [(ngModel)]="g" (click)="resetOthers(kg,pounds,tons)">
+      <div class="sideA">
+        <span class="inp-span">Grams:</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="g" (click)="resetOthers(kg,pounds,tons)">
+      </div>
 
-      <span>Pounds</span>
-      <input type="number" [(ngModel)]="pounds" (click)="resetOthers(kg,g,tons)">
+      <div class="sideA">
+        <span class="inp-span">Pounds:</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="pounds" (click)="resetOthers(kg,g,tons)">
+      </div>
 
-      <span>Tons</span>
-      <input type="number" [(ngModel)]="tons" (click)="resetOthers(kg,g,pounds)">
+      <div class="sideA">
+        <span class="inp-span">Tons:</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="tons" (click)="resetOthers(kg,g,pounds)">
+      </div>
 
     </div>
 
+=
+
     <div>
 
-      <span>Kilograms</span>
-      <span>{{kg}} {{gKg()}} {{poundKg()}} {{tonKg()}} </span>
+      <div class="sideB">
+        <span class="res-span">Kilograms:</span>
+        <span class="databinding res-span">{{kg}} {{gKg()}} {{poundKg()}} {{tonKg()}} </span>
+      </div>
 
-      <span>Grams</span>
-      <span>{{g}} {{kgGram()}} {{poundG()}} {{tonG()}} </span>
+      <div class="sideB">
+        <span class="res-span">Grams:</span>
+        <span class="databinding res-span">{{g}} {{kgGram()}} {{poundG()}} {{tonG()}} </span>
+      </div>
 
-      <span>Pounds</span>
-      <span>{{pounds}} {{kgPound()}} {{gPound()}} {{tonPound()}} </span>
+      <div class="sideB">
+        <span class="res-span">Pounds:</span>
+        <span class="databinding res-span">{{pounds}} {{kgPound()}} {{gPound()}} {{tonPound()}} </span>
+      </div>
 
-      <span>Tons</span>
-      <span>{{tons}} {{kgTon()}} {{gTon()}} {{poundTon()}} </span>
+      <div class="sideB">
+        <span class="res-span">Tons:</span>
+        <span class="databinding res-span">{{tons}} {{kgTon()}} {{gTon()}} {{poundTon()}} </span>
+      </div>
 
     </div>
 

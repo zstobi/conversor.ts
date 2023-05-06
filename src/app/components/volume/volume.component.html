@@ -1,50 +1,79 @@
 <main>
 
-  <h3> Volume Conversor </h3>
+  <div>
+    <button routerLink="" class="backBtn"> Back </button>
+    <h3> Volume Conversor </h3>
+  </div>
 
   <section>
 
     <div>
 
-      <span>Liters</span>
-      <input type="number" [(ngModel)]="l" (click)="resetOthers(m,g,cm,bigC,smallC)">
+      <div class="sideA">
+        <span class="inp-span">Liters</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="l" (click)="resetOthers(m,g,cm,bigC,smallC)">
+      </div>
 
-      <span>Mililiters</span>
-      <input type="number" [(ngModel)]="m" (click)="resetOthers(l,g,cm,bigC,smallC)">
+      <div class="sideA">
+        <span class="inp-span">Mililiters</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="m" (click)="resetOthers(l,g,cm,bigC,smallC)">
+      </div>
 
-      <span>Gallons</span>
-      <input type="number" [(ngModel)]="g" (click)="resetOthers(l,m,cm,bigC,smallC)">
+      <div class="sideA">
+        <span class="inp-span">Gallons</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="g" (click)="resetOthers(l,m,cm,bigC,smallC)">
+      </div>
 
-      <span>Cubic Meter</span>
-      <input type="number" [(ngModel)]="cm" (click)="resetOthers(l,m,g,bigC,smallC)">
+      <div class="sideA">
+        <span class="inp-span">Cubic Meter</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="cm" (click)="resetOthers(l,m,g,bigC,smallC)">
+      </div>
 
-      <span>Cucharadas</span>
-      <input type="number" [(ngModel)]="bigC" (click)="resetOthers(l,m,g,cm,smallC)">
+      <div class="sideA">
+        <span class="inp-span">Cucharadas</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="bigC" (click)="resetOthers(l,m,g,cm,smallC)">
+      </div>
 
-      <span>Cucharaditas</span>
-      <input type="number" [(ngModel)]="smallC" (click)="resetOthers(l,m,g,cm,bigC)">
+      <div class="sideA">
+        <span class="inp-span">Cucharaditas</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="smallC" (click)="resetOthers(l,m,g,cm,bigC)">
+      </div>
 
     </div>
 
+=
+
     <div>
 
-      <span>Liters</span>
-      <span>{{l}} {{mL()}} {{gL()}} {{cmL()}} {{bigcL()}} {{smallcL()}} </span>
+      <div class="sideB">
+        <span class="res-span">Liters</span>
+        <span class="databinding res-span">{{l}} {{mL()}} {{gL()}} {{cmL()}} {{bigcL()}} {{smallcL()}} </span>
+      </div>
 
-      <span>Mililiters</span>
-      <span>{{m}} {{lM()}} {{gM()}} {{cmM()}} {{bigcM()}} {{smallcM()}} </span>
+      <div class="sideB">
+        <span class="res-span">Mililiters</span>
+        <span class="databinding res-span">{{m}} {{lM()}} {{gM()}} {{cmM()}} {{bigcM()}} {{smallcM()}} </span>
+      </div>
 
-      <span>Gallons</span>
-      <span>{{g}} {{lG()}} {{mG()}} {{cmG()}} {{bigcG()}} {{smallcG()}} </span>
+      <div class="sideB">
+        <span class="res-span">Gallons</span>
+        <span class="databinding res-span">{{g}} {{lG()}} {{mG()}} {{cmG()}} {{bigcG()}} {{smallcG()}} </span>
+      </div>
 
-      <span>Cubic Meter</span>
-      <span>{{cm}} {{lCm()}} {{mCm()}} {{gCm()}} {{bigcCm()}} {{smallcCm()}} </span>
+      <div class="sideB">
+        <span class="res-span">Cubic Meter</span>
+        <span class="databinding res-span">{{cm}} {{lCm()}} {{mCm()}} {{gCm()}} {{bigcCm()}} {{smallcCm()}} </span>
+      </div>
 
-      <span>Cucharadas</span>
-      <span>{{bigC}} {{lBigC()}} {{mBigC()}} {{gBigC()}} {{cmBigC()}} {{smallcBigC()}} </span>
+      <div class="sideB">
+        <span class="res-span">Cucharadas</span>
+        <span class="databinding res-span">{{bigC}} {{lBigC()}} {{mBigC()}} {{gBigC()}} {{cmBigC()}} {{smallcBigC()}} </span>
+      </div>
 
-      <span>Cucharaditas</span>
-      <span>{{smallC}} {{lSmallC()}} {{mSmallC()}} {{gSmallC()}} {{cmSmallC()}} {{bigcSmallC()}} </span>
+      <div class="sideB">
+        <span class="res-span">Cucharaditas</span>
+        <span class="databinding res-span">{{smallC}} {{lSmallC()}} {{mSmallC()}} {{gSmallC()}} {{cmSmallC()}} {{bigcSmallC()}} </span>
+      </div>
 
     </div>
 

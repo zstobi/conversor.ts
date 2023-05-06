@@ -13,7 +13,7 @@ import { LengthComponent } from './components/length/length.component';
 const routes: Routes = [
   {path: '', component: MainComponent},
   {path: 'mass', component: MassComponent},
-  {path: 'temp', component: TempComponent},
+  {path: 'temp', component: TempComponent },
   {path: 'time', component: TimeComponent},
   {path: 'speed', component: SpeedComponent},
   {path: 'vol', component: VolumeComponent},

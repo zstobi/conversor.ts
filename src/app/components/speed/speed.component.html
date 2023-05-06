@@ -1,32 +1,49 @@
 <main>
 
-  <h3> Speed Conversor </h3>
+  <div>
+    <button routerLink="" class="backBtn"> Back </button>
+    <h3> Speed Conversor </h3>
+  </div>
 
   <section>
 
     <div>
 
-      <span>{{kphWithS()}}</span>
-      <input type="number" [(ngModel)]="kph" (click)="resetOthers(m,k)">
+      <div class="sideA">
+        <span class="inp-span">{{kphWithS()}}</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="kph" (click)="resetOthers(m,k)">
+      </div>
 
-      <span>{{mphWithS()}}</span>
-      <input type="number" [(ngModel)]="m" (click)="resetOthers(kph,k)">
+      <div class="sideA">
+        <span class="inp-span">{{mphWithS()}}</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="m" (click)="resetOthers(kph,k)">
+      </div>
 
-      <span>Knots</span>
-      <input type="number" [(ngModel)]="k" (click)="resetOthers(kph,m)">
+      <div class="sideA">
+        <span class="inp-span">Knots</span>
+        <input class="inp inp-span" type="number" [(ngModel)]="k" (click)="resetOthers(kph,m)">
+      </div>
 
     </div>
 
+=
+
     <div>
 
-      <span>{{kphWithS()}}</span>
-      <span>{{kph}} {{mKph()}} {{kKph()}} </span>
+      <div class="sideB">
+        <span class="res-span">{{kphWithS()}}</span>
+        <span class="databinding res-span">{{kph}} {{mKph()}} {{kKph()}} </span>
+      </div>
 
-      <span>{{mphWithS()}}</span>
-      <span>{{m}} {{kphM()}} {{kM()}} </span>
+      <div class="sideB">
+        <span class="res-span">{{mphWithS()}}</span>
+        <span class="databinding res-span">{{m}} {{kphM()}} {{kM()}} </span>
+      </div>
 
-      <span>Knots</span>
-      <span>{{k}} {{kphK()}} {{mK()}} </span>
+      <div class="sideB">
+        <span class="res-span">Knots</span>
+        <span class="databinding res-span">{{k}} {{kphK()}} {{mK()}} </span>
+      </div>
 
     </div>
 
