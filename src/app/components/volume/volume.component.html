@@ -1,8 +1,10 @@
 <main>
 
   <div>
-    <button routerLink="" class="backBtn"> Back </button>
-    <h3> Volume Conversor </h3>
+    <app-back-button></app-back-button>
+    <h3>
+      {{pickSvce.picker('Volumen Conversor','Conversor de Volumen')}}
+    </h3>
   </div>
 
   <section>
@@ -10,32 +12,44 @@
     <div>
 
       <div class="sideA">
-        <span class="inp-span">Liters</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Liters:','Litros:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="l" (click)="resetOthers(m,g,cm,bigC,smallC)">
       </div>
 
       <div class="sideA">
-        <span class="inp-span">Mililiters</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Mililiters:','Mililitros:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="m" (click)="resetOthers(l,g,cm,bigC,smallC)">
       </div>
 
       <div class="sideA">
-        <span class="inp-span">Gallons</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Gallons:','Galones:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="g" (click)="resetOthers(l,m,cm,bigC,smallC)">
       </div>
 
       <div class="sideA">
-        <span class="inp-span">Cubic Meter</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Cubic Meters:','Metros Cúbicos:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="cm" (click)="resetOthers(l,m,g,bigC,smallC)">
       </div>
 
       <div class="sideA">
-        <span class="inp-span">Cucharadas</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Tablespoons:','Cucharadas:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="bigC" (click)="resetOthers(l,m,g,cm,smallC)">
       </div>
 
       <div class="sideA">
-        <span class="inp-span">Cucharaditas</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Teaspoons:','Cucharaditas:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="smallC" (click)="resetOthers(l,m,g,cm,bigC)">
       </div>
 
@@ -46,32 +60,44 @@
     <div>
 
       <div class="sideB">
-        <span class="res-span">Liters</span>
+        <span class="res-span">
+          {{pickSvce.picker('Liters:','Litros:')}}
+        </span>
         <span class="databinding res-span">{{l}} {{mL()}} {{gL()}} {{cmL()}} {{bigcL()}} {{smallcL()}} </span>
       </div>
 
       <div class="sideB">
-        <span class="res-span">Mililiters</span>
+        <span class="res-span">
+          {{pickSvce.picker('Mililiters:','Mililitros:')}}
+        </span>
         <span class="databinding res-span">{{m}} {{lM()}} {{gM()}} {{cmM()}} {{bigcM()}} {{smallcM()}} </span>
       </div>
 
       <div class="sideB">
-        <span class="res-span">Gallons</span>
+        <span class="res-span">
+          {{pickSvce.picker('Gallons:','Galones:')}}
+        </span>
         <span class="databinding res-span">{{g}} {{lG()}} {{mG()}} {{cmG()}} {{bigcG()}} {{smallcG()}} </span>
       </div>
 
       <div class="sideB">
-        <span class="res-span">Cubic Meter</span>
+        <span class="res-span">
+          {{pickSvce.picker('Cubic Meters:','Metros Cúbicos:')}}
+        </span>
         <span class="databinding res-span">{{cm}} {{lCm()}} {{mCm()}} {{gCm()}} {{bigcCm()}} {{smallcCm()}} </span>
       </div>
 
       <div class="sideB">
-        <span class="res-span">Cucharadas</span>
+        <span class="res-span">
+          {{pickSvce.picker('Tablespoons:','Cucharadas:')}}
+        </span>
         <span class="databinding res-span">{{bigC}} {{lBigC()}} {{mBigC()}} {{gBigC()}} {{cmBigC()}} {{smallcBigC()}} </span>
       </div>
 
       <div class="sideB">
-        <span class="res-span">Cucharaditas</span>
+        <span class="res-span">
+          {{pickSvce.picker('Teaspoons:','Cucharaditas:')}}
+        </span>
         <span class="databinding res-span">{{smallC}} {{lSmallC()}} {{mSmallC()}} {{gSmallC()}} {{cmSmallC()}} {{bigcSmallC()}} </span>
       </div>
 

@@ -1,8 +1,10 @@
 <main>
 
   <div>
-    <button routerLink="" class="backBtn"> Back </button>
-    <h3> Mass Conversor </h3>
+    <app-back-button></app-back-button>
+    <h3>
+      {{pickSvce.picker('Mass Conversor','Conversor de Masa')}}
+    </h3>
   </div>
 
   <section>
@@ -10,22 +12,30 @@
     <div>
 
       <div class="sideA">
-        <span class="inp-span">Kilograms:</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Kilograms:','Kilogramos:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="kg" (click)="resetOthers(g,pounds,tons)">
       </div>
 
       <div class="sideA">
-        <span class="inp-span">Grams:</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Grams:','Gramos:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="g" (click)="resetOthers(kg,pounds,tons)">
       </div>
 
       <div class="sideA">
-        <span class="inp-span">Pounds:</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Pounds:','Libras:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="pounds" (click)="resetOthers(kg,g,tons)">
       </div>
 
       <div class="sideA">
-        <span class="inp-span">Tons:</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Tons:','Toneladas:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="tons" (click)="resetOthers(kg,g,pounds)">
       </div>
 
@@ -36,22 +46,30 @@
     <div>
 
       <div class="sideB">
-        <span class="res-span">Kilograms:</span>
+        <span class="res-span">
+          {{pickSvce.picker('Kilograms:','Kilogramos:')}}
+        </span>
         <span class="databinding res-span">{{kg}} {{gKg()}} {{poundKg()}} {{tonKg()}} </span>
       </div>
 
       <div class="sideB">
-        <span class="res-span">Grams:</span>
+        <span class="res-span">
+          {{pickSvce.picker('Grams:','Gramos:')}}
+        </span>
         <span class="databinding res-span">{{g}} {{kgGram()}} {{poundG()}} {{tonG()}} </span>
       </div>
 
       <div class="sideB">
-        <span class="res-span">Pounds:</span>
+        <span class="res-span">
+          {{pickSvce.picker('Pounds:','Libras:')}}
+        </span>
         <span class="databinding res-span">{{pounds}} {{kgPound()}} {{gPound()}} {{tonPound()}} </span>
       </div>
 
       <div class="sideB">
-        <span class="res-span">Tons:</span>
+        <span class="res-span">
+          {{pickSvce.picker('Tons:','Toneladas:')}}
+        </span>
         <span class="databinding res-span">{{tons}} {{kgTon()}} {{gTon()}} {{poundTon()}} </span>
       </div>
 

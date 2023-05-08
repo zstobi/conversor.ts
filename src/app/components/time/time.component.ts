@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AvoidCharsService } from 'src/app/services/avoid-chars.service';
+import { WordPickerService } from 'src/app/services/word-picker.service';
 
 @Component({
   selector: 'app-time',
@@ -10,6 +12,15 @@ export class TimeComponent {
   h = '';
   m = '';
   s = '';
+
+  constructor (
+    private inputSvce:AvoidCharsService,
+    public pickSvce:WordPickerService
+  ) { }
+
+  ngOnInit(){
+    this.inputSvce.inputsPrevents();
+  }
 
   dH(){
     if (typeof this.d === 'number') {

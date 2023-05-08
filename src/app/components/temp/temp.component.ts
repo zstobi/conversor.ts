@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WordPickerService } from 'src/app/services/word-picker.service';
 
 @Component({
   selector: 'app-temp',
@@ -9,6 +10,10 @@ export class TempComponent {
   c = '';
   f = '';
   k = '';
+
+  constructor (
+    public pickSvce:WordPickerService
+  ) { }
 
   cF(){
     if (typeof this.c === 'number') {

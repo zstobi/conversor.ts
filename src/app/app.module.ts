@@ -15,6 +15,7 @@ import { LengthComponent } from './components/length/length.component';
 import { GasComponent } from './components/gas/gas.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
+import { BackButtonComponent } from './components/back-button/back-button.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FooterComponent } from './components/footer/footer.component';
     DsizeComponent,
     LengthComponent,
     GasComponent,
-    FooterComponent
+    FooterComponent,
+    BackButtonComponent
   ],
   imports: [
     BrowserModule,

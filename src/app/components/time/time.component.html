@@ -1,8 +1,10 @@
 <main>
 
   <div>
-    <button routerLink="" class="backBtn"> Back </button>
-    <h3> Time Conversor </h3>
+    <app-back-button></app-back-button>
+    <h3>
+      {{pickSvce.picker('Time Conversor','Conversor de Tiempo')}}
+    </h3>
   </div>
 
   <section>
@@ -10,22 +12,30 @@
     <div>
 
       <div class="sideA">
-        <span class="inp-span">Days</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Days:','Días:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="d" (click)="resetOthers(h,m,s)">
       </div>
 
       <div class="sideA">
-        <span class="inp-span">Hours</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Hours:','Horas:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="h" (click)="resetOthers(d,m,s)">
       </div>
 
       <div class="sideA">
-        <span class="inp-span">Minutes</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Minutes:','Minutos:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="m" (click)="resetOthers(d,h,s)">
       </div>
 
       <div class="sideA">
-        <span class="inp-span">Seconds</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Seconds:','Segundos:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="s" (click)="resetOthers(d,h,m)">
       </div>
 
@@ -36,22 +46,30 @@
     <div>
 
       <div class="sideB">
-        <span class="res-span">Days</span>
+        <span class="res-span">
+          {{pickSvce.picker('Days:','Días:')}}
+        </span>
         <span class="databinding res-span">{{d}} {{hD()}} {{mD()}} {{sD()}} </span>
       </div>
 
       <div class="sideB">
-        <span class="res-span">Hours</span>
+        <span class="res-span">
+          {{pickSvce.picker('Hours:','Horas:')}}
+        </span>
         <span class="databinding res-span">{{h}} {{dH()}} {{mH()}} {{sH()}} </span>
       </div>
 
       <div class="sideB">
-        <span class="res-span">Minutes</span>
+        <span class="res-span">
+          {{pickSvce.picker('Minutes:','Minutos:')}}
+        </span>
         <span class="databinding res-span">{{m}} {{dM()}} {{hM()}} {{sM()}} </span>
       </div>
 
       <div class="sideB">
-        <span class="res-span">Seconds</span>
+        <span class="res-span">
+          {{pickSvce.picker('Seconds:','Segundos:')}}
+        </span>
         <span class="databinding res-span">{{s}} {{dS()}} {{hS()}} {{mS()}} </span>
       </div>
 

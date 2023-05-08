@@ -1,8 +1,10 @@
 <main>
 
   <div>
-    <button routerLink="" class="backBtn"> Back </button>
-    <h3> Length Conversor </h3>
+    <app-back-button></app-back-button>
+    <h3>
+      {{pickSvce.picker('Length Conversor','Conversor de Longitud')}}
+    </h3>
   </div>
 
   <section>
@@ -10,37 +12,51 @@
     <div>
 
       <div class="sideA">
-        <span class="inp-span">Kilometers</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Kilometers:','Kilómetros:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="kilo" (click)="resetOthers(meter,centi,mile,yard,feet,inch)">
       </div>
 
       <div class="sideA">
-        <span class="inp-span">Meters</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Meters:','Metros:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="meter" (click)="resetOthers(kilo,centi,mile,yard,feet,inch)">
       </div>
 
       <div class="sideA">
-        <span class="inp-span">Centimeters</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Centimeters:','Centímetros:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="centi" (click)="resetOthers(kilo,meter,mile,yard,feet,inch)">
       </div>
 
       <div class="sideA">
-        <span class="inp-span">Miles</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Miles:','Millas:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="mile" (click)="resetOthers(kilo,meter,centi,yard,feet,inch)">
       </div>
 
       <div class="sideA">
-        <span class="inp-span">Yards</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Yards:','Yardas:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="yard" (click)="resetOthers(kilo,meter,centi,mile,feet,inch)">
       </div>
 
       <div class="sideA">
-        <span class="inp-span">Feets</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Feets:','Pies:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="feet" (click)="resetOthers(kilo,meter,centi,mile,yard,inch)">
       </div>
 
       <div class="sideA">
-        <span class="inp-span">Inches</span>
+        <span class="inp-span">
+          {{pickSvce.picker('Inches:','Pulgadas:')}}
+        </span>
         <input class="inp inp-span" type="number" [(ngModel)]="inch" (click)="resetOthers(kilo,meter,centi,mile,yard,feet)">
       </div>
 
@@ -51,37 +67,51 @@
     <div>
 
       <div class="sideB">
-        <span class="res-span">Kilometers</span>
+        <span class="res-span">
+          {{pickSvce.picker('Kilometers:','Kilómetros:')}}
+        </span>
         <span class="databinding res-span">{{kilo}} {{meterKilo()}} {{centiKilo()}} {{mileKilo()}} {{yardKilo()}} {{feetKilo()}} {{inchKilo()}} </span>
       </div>
 
       <div class="sideB">
-        <span class="res-span">Meters</span>
+        <span class="res-span">
+          {{pickSvce.picker('Meters:','Metros:')}}
+        </span>
         <span class="databinding res-span">{{meter}} {{kiloMeter()}} {{centiMeter()}} {{mileMeter()}} {{yardMeter()}} {{feetMeter()}} {{inchMeter()}} </span>
       </div>
 
       <div class="sideB">
-        <span class="res-span">Centimeter</span>
+        <span class="res-span">
+          {{pickSvce.picker('Centimeters:','Centímetros:')}}
+        </span>
         <span class="databinding res-span">{{centi}} {{kiloCenti()}} {{meterCenti()}} {{mileCenti()}} {{yardCenti()}} {{feetCenti()}} {{inchCenti()}} </span>
       </div>
 
       <div class="sideB">
-        <span class="res-span">Miles</span>
+        <span class="res-span">
+          {{pickSvce.picker('Miles:','Millas:')}}
+        </span>
         <span class="databinding res-span">{{mile}} {{kiloMile()}} {{meterMile()}} {{centiMile()}} {{yardMile()}} {{feetMile()}} {{inchMile()}} </span>
       </div>
 
       <div class="sideB">
-        <span class="res-span">Yards</span>
+        <span class="res-span">
+          {{pickSvce.picker('Yards:','Yardas:')}}
+        </span>
         <span class="databinding res-span">{{yard}} {{kiloYard()}} {{meterYard()}} {{centiYard()}} {{mileYard()}} {{feetYard()}} {{inchYard()}} </span>
       </div>
 
       <div class="sideB">
-        <span class="res-span">Feets</span>
+        <span class="res-span">
+          {{pickSvce.picker('Feets:','Pies:')}}
+        </span>
         <span class="databinding res-span">{{feet}} {{kiloFeet()}} {{meterFeet()}} {{centiFeet()}} {{mileFeet()}} {{yardFeet()}} {{inchFeet()}} </span>
       </div>
 
       <div class="sideB">
-        <span class="res-span">Inches</span>
+        <span class="res-span">
+          {{pickSvce.picker('Inches:','Pulgadas:')}}
+        </span>
         <span class="databinding res-span">{{inch}} {{kiloInch()}} {{meterInch()}} {{centiInch()}} {{mileInch()}} {{yardInch()}} {{feetInch()}} </span>
       </div>
 

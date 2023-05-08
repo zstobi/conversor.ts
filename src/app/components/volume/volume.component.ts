@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AvoidCharsService } from 'src/app/services/avoid-chars.service';
+import { WordPickerService } from 'src/app/services/word-picker.service';
 
 @Component({
   selector: 'app-volume',
@@ -12,6 +14,15 @@ export class VolumeComponent {
   cm = '';
   bigC = '';
   smallC = '';
+
+  constructor (
+    private inputSvce:AvoidCharsService,
+    public pickSvce:WordPickerService
+  ) { }
+
+  ngOnInit(){
+    this.inputSvce.inputsPrevents();
+  }
 
   lM(){
     if (typeof this.l === 'number') {

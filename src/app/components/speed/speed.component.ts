@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AvoidCharsService } from 'src/app/services/avoid-chars.service';
+import { WordPickerService } from 'src/app/services/word-picker.service';
 
 @Component({
   selector: 'app-speed',
@@ -9,6 +11,15 @@ export class SpeedComponent {
   kph:any = '';
   m:any = '';
   k = '';
+
+  constructor (
+    private inputSvce:AvoidCharsService,
+    public pickSvce:WordPickerService
+  ) { }
+
+  ngOnInit(){
+    this.inputSvce.inputsPrevents();
+  }
 
   kphM(){
     if (typeof this.kph === 'number') {

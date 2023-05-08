@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AvoidCharsService } from 'src/app/services/avoid-chars.service';
+import { WordPickerService } from 'src/app/services/word-picker.service';
 
 @Component({
   selector: 'app-mass',
@@ -10,6 +12,15 @@ export class MassComponent {
   g = '';
   pounds = '';
   tons = '';
+
+  constructor (
+    private inputSvce:AvoidCharsService,
+    public pickSvce:WordPickerService
+  ) { }
+
+  ngOnInit(){
+    this.inputSvce.inputsPrevents();
+  }
 
   kgGram(){
     if (typeof this.kg === 'number') {

@@ -209,10 +209,22 @@ h3, span {
   color: hsl(217, 71%, 53%);
 
   // design
-  border: 2px solid hsl(217, 71%, 53%);
+  border: 1px solid hsl(217, 71%, 53%);
 }
 
 .main {
   height: 90vh;
   justify-content: space-between;
+}
+
+
+// arrows from number input disabled
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
 }

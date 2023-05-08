@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AvoidCharsService } from 'src/app/services/avoid-chars.service';
+import { WordPickerService } from 'src/app/services/word-picker.service';
 
 @Component({
   selector: 'app-length',
@@ -13,6 +15,15 @@ export class LengthComponent {
   yard = '';
   feet = '';
   inch = '';
+
+  constructor (
+    private inputSvce:AvoidCharsService,
+    public pickSvce:WordPickerService
+  ) { }
+
+  ngOnInit(){
+    this.inputSvce.inputsPrevents();
+  }
 
   kiloMeter(){
     if (typeof this.kilo === 'number') {
