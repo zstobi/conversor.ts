@@ -8,8 +8,8 @@ import { WordPickerService } from 'src/app/services/word-picker.service';
   styleUrls: ['./speed.component.scss']
 })
 export class SpeedComponent {
-  kph:any = '';
-  m:any = '';
+  kph = '';
+  m = '';
   k = '';
 
   constructor (
@@ -75,19 +75,19 @@ export class SpeedComponent {
     if (a === this.k || b === this.k) this.k = '';
   }
 
-  kphWithS():string{
-    if (this.kph === 1){
-      return 'Kilometer per Hour';
-    } else {
-      return 'Kilometers per Hour'
-    }
-  }
+  // kphWithS():string{
+  //   if (this.kph === 1){
+  //     return 'Kilometer per Hour';
+  //   } else {
+  //     return 'Kilometers per Hour'
+  //   }
+  // }
 
-  mphWithS(){
-    if (this.m === 1){
-      return 'Mile per Hour';
-    } else {
-      return 'Miles per Hour';
-    }
-  }
+  // mphWithS(){
+  //   if (this.m === 1){
+  //     return 'Mile per Hour';
+  //   } else {
+  //     return 'Miles per Hour';
+  //   }
+  // }
 }

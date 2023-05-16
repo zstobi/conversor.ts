@@ -10,7 +10,7 @@ export class AvoidCharsService {
   inputsPrevents(){
     const inputs = document.querySelectorAll('input');
 
-    for (let i = 0; i <= 4; i++){
+    for (let i = 0; i < inputs.length; i++){
       inputs[i]?.addEventListener('keypress',(e)=>{
         if (e.key === '-' || e.key === ','){
           e.preventDefault();
